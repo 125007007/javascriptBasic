@@ -1,6 +1,6 @@
-function one(callback){
-    console.log(callback);
-    callback();
+function one(bob){
+    console.log('func one called');
+    bob();
 }
 
 function two(){

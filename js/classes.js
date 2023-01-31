@@ -28,6 +28,18 @@ class Dog extends Animal{
 
 }
 
+class Pug extends Dog{
+    constructor(type, size, numLegs, loyalty, noseSize, breed){
+        super(type, size, numLegs, loyalty);
+        this.noseSize = noseSize;
+        this.breed = breed;
+    }
+    getExtraInfo(){
+        console.log('Breed: ' + this.breed);
+        super.getInfo();
+        console.log('Nose Size: ' + this.noseSize);
+    }
+}
 class Cat extends Animal{
     constructor(type, size, numLegs){
         super(type, size, numLegs);
@@ -36,8 +48,11 @@ class Cat extends Animal{
         super.basicInfo();
     }
 }
+
 var dog1 = new Dog('Dog', 'Large', 4, 'Strong');
 var cat1 = new Cat('Cat', 'Small', 4);
-dog1.getInfo();
-cat1.getInfo();
+var pug1 = new Pug('Dog', 'Small', 4, 'Strong', 'Short', 'Pug')
 
+//dog1.getInfo();
+//cat1.getInfo();
+pug1.getExtraInfo();
